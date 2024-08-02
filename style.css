@@ -1,0 +1,75 @@
+body {
+    font-family: 'Montserrat';font-size: 22px;
+    text-shadow: 2px 2px 1px rgb(119, 119, 119);
+} 
+#buy {
+  position: absolute;
+  top: 750px; left: 515px;
+  border-radius: 75px;
+  background: #16913a;
+  padding: 20px; 
+  width: 250px;
+  height: 50px; 
+  margin: auto;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px inset, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+} 
+#sell {
+  position: absolute;
+  top: 750px; left: 1100px;
+  border-radius: 75px;
+  background: #700a08;
+  padding: 20px; 
+  width: 250px;
+  height: 50px; 
+  margin: auto;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px inset, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+} 
+.link-cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit; /* Inherit text color */
+}
+.link-cover:hover {
+      opacity: 0.1; /* Optional: visual feedback on hover */
+}
+#buy, #sell {
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+#buy:hover {
+  background: #0e6a2d;
+  border: 2px solid #ffffff;
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+#sell:hover {
+  background: #4f0604;
+  border: 2px solid #ffffff;
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+p {
+  font-size: 3.5em; /* 14px/16=0.875em */
+  position: relative;
+  top: -100px; left: 35px;
+}
+#frame {
+  position: absolute;
+  top: 50px; left:625px;
+  border-radius: 75px;
+  background: #0a0a0a;
+  padding: 20px; 
+  width: 600px;
+  height: 600px; 
+  margin: auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px inset, rgba(125, 17, 212, 0.3) 0px 30px 60px -30px, rgba(125, 17, 212, 0.3) 0px -2px 6px 0px inset;
+} 
+#text1 {
+  position: absolute;
+  top: 900px; left: 1350px;
+}
