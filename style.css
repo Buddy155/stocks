@@ -73,3 +73,14 @@ p {
   position: absolute;
   top: 900px; left: 1350px;
 }
+.chart {
+  background: none;
+  position: relative;
+  top: 50px; left: 50px;
+  width: 500px;
+  height: 500px;
+  border-left: 1px none;
+  border-bottom: 1px none;
+  padding: 20px 20px 20px 0;
+  margin: auto;
+}
