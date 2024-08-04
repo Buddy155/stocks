@@ -3,8 +3,8 @@ body {
     text-shadow: 2px 2px 1px rgb(119, 119, 119);
 } 
 #buy {
-  position: absolute;
-  top: 750px; left: 515px;
+  position: relative;
+  top: 20px; left: -200px;
   border-radius: 75px;
   background: #16913a;
   padding: 20px; 
@@ -15,8 +15,8 @@ body {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px inset, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 } 
 #sell {
-  position: absolute;
-  top: 750px; left: 1100px;
+  position: relative;
+  top: -70px; left: 200px;
   border-radius: 75px;
   background: #700a08;
   padding: 20px; 
@@ -59,8 +59,8 @@ p {
   top: -100px; left: 35px;
 }
 #frame {
-  position: absolute;
-  top: 50px; left:625px;
+  position: relative;
+  top: 0px; left: 0px;
   border-radius: 75px;
   background: #0a0a0a;
   padding: 20px; 
@@ -70,8 +70,8 @@ p {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px inset, rgba(125, 17, 212, 0.3) 0px 30px 60px -30px, rgba(125, 17, 212, 0.3) 0px -2px 6px 0px inset;
 } 
 #text1 {
-  position: absolute;
-  top: 900px; left: 1350px;
+  position: relative;
+  top: -50px; left: 0px;
 }
 .chart {
   background: none;
