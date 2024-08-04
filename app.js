@@ -18,31 +18,38 @@ document.addEventListener("DOMContentLoaded", function() {
     var intervalID = setInterval(function () {
 
         // Your logic here
-        autoval = autoval +20;
+        autoval = autoval +10;
         points = "00,00 20,20 40,40 60,60 80,80 100,100 120,120 140,140 160,160 180,180 200,200 220,220 240,240 260,260 280,280 300,300 320,320 340,340 360,360 380,380 400,400 420,420 440,440 460,460 480,480 500,50"+tot;
-        if (vary < -1 && vary > 500) {
-            vary = vary+getRandomIntNeg(-30, 50);
+        if (vary > 49 && vary < 450) {
+            vary = vary+getRandomIntNeg(-30, 30);
+            console.log("NORMAL");
         }
-        else {
-            vary = vary+getRandomIntPos(-30, 0)
+        else if (vary < 50){
+            vary = vary+getRandomIntPos(1, 50)
+            console.log("FORCE DOWN");
         }
-        varx = varx+20;
+        else if (vary > 449){
+            vary = vary+getRandomIntPos(-50, -1)
+            console.log("FORCE UP");
+        }
+        varx = varx+10;
+        console.log(vary);
         
         
         tot = tot+" "+varx+","+vary;
-        console.log("autoval"+autoval);
+        //console.log("autoval"+autoval);
         if (++x === 50000) {
             window.clearInterval(intervalID);
         }
         var sliderviewboxoutput =  autoval+" 0 500 500";
-        console.log(sliderviewboxoutput);
+        //console.log(sliderviewboxoutput);
         svg1.setAttribute('viewBox', sliderviewboxoutput);
         
-        console.log("tot"+tot);
+        //onsole.log("tot"+tot);
         polyline.setAttribute('points', points);
-        console.log("points"+points);
+        //console.log("points"+points);
         
-     }, 1000);
+     }, 100);
     const slider = document.getElementById('myRange');
     slider.oninput = function() {
         
