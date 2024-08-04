@@ -2,6 +2,10 @@ body {
     font-family: 'Montserrat';font-size: 22px;
     text-shadow: 2px 2px 1px rgb(119, 119, 119);
 } 
+#sliderstyle {
+  position: relative;
+  top: -100px; left: 0px;
+}
 #buy {
   position: relative;
   top: 20px; left: -200px;
