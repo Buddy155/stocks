@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
     //graph points
     var VAR = 100;
     var autoval = 50;
-    
+    var day = 1;
+    var rate = 1;
     var varx = 500;
     var vary = 0;
     var tot = "";
@@ -48,6 +49,9 @@ document.addEventListener("DOMContentLoaded", function() {
         //onsole.log("tot"+tot);
         polyline.setAttribute('points', points);
         //console.log("points"+points);
+        if (++x === 6000) {
+            daychange();
+        }
         
      }, 100);
     const slider = document.getElementById('myRange');
@@ -68,5 +72,15 @@ document.addEventListener("DOMContentLoaded", function() {
         const minCeiled = Math.ceil(min);
         const maxFloored = Math.floor(max);
         return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+    }
+    function daychange()
+    {
+        //show ui about day ending
+        day = day+1;
+        //reseet data and adjust for next day
+        if (rate==5) {
+            rate = rate +1
+        }
+        
     }
 });
