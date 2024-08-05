@@ -100,3 +100,8 @@ p {
   margin: auto;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px inset, rgba(125, 17, 212, 0.3) 0px 30px 60px -30px, rgba(125, 17, 212, 0.3) 0px -2px 6px 0px inset;
 } 
+#valdis {
+ position: relative;
+ top: -1000px; left: 500px;
+
+} 
