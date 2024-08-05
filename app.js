@@ -16,6 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
     var points = "00,00 20,20 40,40 60,60 80,80 100,100 120,120 140,140 160,160 180,180 200,200 220,220 240,240 260,260 280,280 300,300 320,320 340,340 360,360 380,380 400,400 420,420 440,440 460,460 480,480 500,50";
     var polyline = document.getElementById('line');
 
+    let opacityValue = 1;
+    const box = document.getElementById('frame2');
+    
+   
+    
+
     var intervalID = setInterval(function () {
 
         // Your logic here
@@ -23,18 +29,18 @@ document.addEventListener("DOMContentLoaded", function() {
         points = "00,00 20,20 40,40 60,60 80,80 100,100 120,120 140,140 160,160 180,180 200,200 220,220 240,240 260,260 280,280 300,300 320,320 340,340 360,360 380,380 400,400 420,420 440,440 460,460 480,480 500,50"+tot;
         if (vary > 49 && vary < 450) {
             vary = vary+getRandomIntNeg(-30, 30);
-            console.log("NORMAL");
+            //console.log("NORMAL");
         }
         else if (vary < 50){
             vary = vary+getRandomIntPos(1, 50)
-            console.log("FORCE DOWN");
+            //console.log("FORCE DOWN");
         }
         else if (vary > 449){
             vary = vary+getRandomIntPos(-50, -1)
-            console.log("FORCE UP");
+            //console.log("FORCE UP");
         }
         varx = varx+10;
-        console.log(vary);
+        //console.log(vary);
         
         
         tot = tot+" "+varx+","+vary;
@@ -49,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
         //onsole.log("tot"+tot);
         polyline.setAttribute('points', points);
         //console.log("points"+points);
-        if (++x === 6000) {
+        if (++x === 10) {
             daychange();
         }
         
@@ -66,21 +72,31 @@ document.addEventListener("DOMContentLoaded", function() {
     function getRandomIntNeg(min, max) {
         const minCeiled = Math.ceil(min);
         const maxFloored = Math.floor(max);
-        return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+        return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
     }
     function getRandomIntPos(min, max) {
         const minCeiled = Math.ceil(min);
         const maxFloored = Math.floor(max);
-        return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+        return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
     }
     function daychange()
     {
         //show ui about day ending
+        points = "00,00 20,20 40,40 60,60 80,80 100,100 120,120 140,140 160,160 180,180 200,200 220,220 240,240 260,260 280,280 300,300 320,320 340,340 360,360 380,380 400,400 420,420 440,440 460,460 480,480 500,50"+tot;
         day = day+1;
+        varx = 500;
+        var vary = 0;
+        opacityValue = 1;
+        box.style.opacity = opacityValue;
         //reseet data and adjust for next day
         if (rate==5) {
             rate = rate +1
         }
-        
+        //15 secs before it closes
+        setTimeout(function(){
+            opacityValue = 0;
+            box.style.opacity = opacityValue;
+        }, 1000);
     }
+    
 });
