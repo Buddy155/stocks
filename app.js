@@ -59,9 +59,9 @@ document.addEventListener("DOMContentLoaded", function() {
         let profitdis = document.getElementById("profit");
         profitdis.innerHTML = "Profit:"+profit;
         let multiplierdis = document.getElementById("multiplier");
-        multiplierdis.innerHTML = "Multiplier:"+multiplier;
+        multiplierdis.innerHTML = "Multiplier:"+multiplier+"x";
         let moneydis = document.getElementById("money");
-        moneydis.innerHTML = "Money:"+money+"$";
+        moneydis.innerHTML = "Money:$"+money;
         //console.log(curval);
         if (x==0) {
             //console.log("FIRST TOT"+tot);
@@ -159,9 +159,15 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("profit"+profit);
         console.log("multiplier"+multiplier);
         console.log("sold for "+whensold+"!");
-        multiplier = 0;
-        profit = profit+money*multiplier-money;
-        money = money + money*multiplier-money
+        if (multiplier>0) {
+            profit = profit+money*multiplier-money;
+            money = money+money*multiplier-money;
+            multiplier = 0;
+            whenbought=0;
+            whensold=0;
+        }
+        profit = Math.round(profit * 100) / 100
+        money = Math.round(money * 100) / 100
     }
     function buy() {
         whenbought = curval;
