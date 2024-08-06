@@ -101,7 +101,19 @@ p {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px inset, rgba(125, 17, 212, 0.3) 0px 30px 60px -30px, rgba(125, 17, 212, 0.3) 0px -2px 6px 0px inset;
 } 
 #valdis {
- position: relative;
- top: -1000px; left: 500px;
+ position: absolute;
+ top: 350px; left: 0px;
 
 } 
+#profit {
+  position: absolute;
+ top: 275px; left: 0px;
+ } 
+ #multiplier {
+  position: absolute;
+ top: 200px; left: 0px;
+ } 
+ #money{
+  position: absolute;
+ top: 125px; left: 0px;
+ } 
