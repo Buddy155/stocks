@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
         varx = varx+10;
         curval = 500-vary
         let valdis1 = document.getElementById("valdis");
-        valdis1.innerHTML = "Value:"+curval;
+        valdis1.innerHTML = "Value:$"+curval+",000";
         let profitdis = document.getElementById("profit");
         profitdis.innerHTML = "Profit:"+profit;
         let multiplierdis = document.getElementById("multiplier");
