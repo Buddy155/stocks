@@ -7,3 +7,4 @@ I got it done though!
 How to play:
 Press buy when low and sell when high
 Pretty simple have fun!
+![image](https://github.com/user-attachments/assets/4f40b47b-5472-4326-9e07-2f4e23bd9a6b)
