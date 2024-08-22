@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded", function() {
     //graph points
     var VAR = 100;
     var autoval = 50;
-    var day = 1;
+    //var day = 1;
     var rate = 1;
     var varx = 500;
     var vary = 0;
     var tot = "";
     var points = "00,00 20,20 40,40 60,60 80,80 100,100 120,120 140,140 160,160 180,180 200,200 220,220 240,240 260,260 280,280 300,300 320,320 340,340 360,360 380,380 400,400 420,420 440,440 460,460 480,480 500,50";
     var polyline = document.getElementById('line');
-    var daypop = 0;
+    //var daypop = 0;
     var whensold = 0;
     var whenbought = 0;
     var multiplier = 0;
@@ -86,22 +86,22 @@ document.addEventListener("DOMContentLoaded", function() {
         //onsole.log("tot"+tot);
         polyline.setAttribute('points', points);
         //console.log("points"+points);
-        if (++x === 10) {
-            daychange();
-        }
-        if (x>30) {
-            if (daypop==0) {
-                var five = points.split(" ")[0];
+       // if (++x === 10) {
+            //daychange();
+        //}
+        //if (x>30) {
+           // if (daypop==0) {
+                //var five = points.split(" ")[0];
                 //console.log("five"+five);
-                deletenum = getlength(five)+1;
+                //deletenum = getlength(five)+1;
                 //console.log("pointb"+points);
-                points=points.slice(deletenum);
+                //points=points.slice(deletenum);
                 //console.log("DeleteNum"+deletenum)
                 //console.log("after"+points)
                 //console.log("aftertot"+tot)
-            }
+           // }
             
-        }
+        //}
         
         console.log(multiplier);
         console.log(profit);
@@ -126,30 +126,30 @@ document.addEventListener("DOMContentLoaded", function() {
         const maxFloored = Math.floor(max);
         return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
     }
-    function daychange()
-    {
-        daypop = 1;
+    //function daychange()
+    //{
+        //daypop = 1;
         //show ui about day ending
-        points = tot;
-        day = day+1;
-        varx = 500;
-        var vary = 0;
-        opacityValue = 1;
-        box.style.opacity = opacityValue;
+        //points = tot;
+        //day = day+1;
+        //varx = 500;
+        //var vary = 0;
+        //opacityValue = 1;
+        //box.style.opacity = opacityValue;
         //reseet data and adjust for next day
-        if (rate==5) {
-            rate = rate +1
-        }
+        //if (rate==5) {
+            //rate = rate +1
+        //}
         //15 secs before it closes
-        setTimeout(function(){
-            opacityValue = 0;
-            box.style.opacity = opacityValue;
-            setTimeout(function(){
-                daypop = 0;
-            }, 3000);
-        }, 1000);
+        //setTimeout(function(){
+            //opacityValue = 0;
+            //box.style.opacity = opacityValue;
+            //setTimeout(function(){
+                //daypop = 0;
+           // }, 3000);
+        //}, 1000);
         
-    }
+    //}
     function getlength(number) {
         return number.toString().length;
     }
